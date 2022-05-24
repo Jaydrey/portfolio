@@ -1,0 +1,121 @@
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.app{
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: -25%;
+    width: 25%;
+    height: 100%;
+    transition: all 1s ease;
+}
+.sidebar{
+    width: 100%;
+}
+.sidebar-nav{
+    width: 100%;
+    padding: 1.5rem;
+}
+.profile{
+    width: 100%;
+}
+.profile h4{
+    max-width: 100%;
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    user-select: none;
+}
+.profile p{
+    width: 100%;
+    text-align: center;
+}
+.nav-list{
+    width: 100%;
+}
+.nav-items{
+    width: 100%;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+}
+.nav-items li{
+    width: 100%;
+    padding-bottom: 1.5rem;
+}
+.nav-items a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: rgba(0,0,0,1);
+    line-height: 1.2rem;
+    padding-bottom: .3rem;
+}
+.nav-item a span{
+    margin-left: .4rem;
+}
+.nav-item .active{
+    color: rgb(189, 140, 8);
+}
+.nav-item a:hover{
+    color: rgba(189, 140, 8, 1);
+    border-bottom: 1px solid transparent;
+}
+
+#check{
+    display: none;
+}
+label #cancel{
+    position: absolute;
+    cursor: pointer;
+    z-index:1111;
+    top: 1.5rem;
+    left: -10rem;
+    transition: all .5s ease;
+    /* padding: 6px 12px; */
+
+    /* left: -2rem; */
+}
+label #menu{
+    position: absolute;
+    cursor: pointer;
+    left: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    border-radius: 6px;
+    transition: all .5s ease;
+    /* padding: 6px 12px; */
+    /* color: white; */
+}
+#check:checked ~ .nav{
+    left: 0;
+}
+#check:checked ~ label #menu{
+    left: 15rem;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 15rem;
+}
+#check:checked ~ .main{
+    margin-left: 25%;
+}
+.main{
+    height: 100vh;
+    transition: all .5s;
+    width: 75%;
+    max-width: 100%;
+}

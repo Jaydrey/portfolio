@@ -1,0 +1,74 @@
+{% load static %} {% now "Y" as current_year %}
+<nav class="sidebar">
+  <div class="sidebar-nav">
+    <div class="profile">
+      <h4>
+        {% comment %} <i class="fa-solid fa-user"></i> {% endcomment %}
+        Jarib Wetshi
+      </h4>
+      <p><span class="profile-occupation">Backend Developer</span></p>
+    </div>
+    <div class="nav-list">
+      <ul class="nav-items">
+        <li class="nav-item">
+          <a href="/" class="active">
+            <i class="fa-solid fa-house"></i>
+            <span class="link-name">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/about/">
+            <span class="link-name">About</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/services/">
+            <i class="fa-solid fa-laptop"></i>
+            <span class="link-name">Services</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/skills/">
+            <i class="fa-solid fa-helmet-safety"></i>
+            <span class="link-name">Skills</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/education">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span class="link-name">Education</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/experience/">
+            <span class="link-name">Experience</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/work/">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span class="link-name">Work</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact/">
+            <i class="fa-solid fa-mobile"></i>
+            <span class="link-name">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="social-medias">
+      <a href="#"><i class="bi bi-github"></i><span>Github</span></a>
+      <a href="#"
+        ><i class="bi bi-instagram"></i><span class="insta">Instagram</span></a
+      >
+      <a href="#"
+        ><i class="bi bi-twitter"></i><span class="tweet">Twitter</span></a
+      >
+    </div>
+    <footer>
+      <p>© Copyright ©{{ current_year }} All rights reserved</p>
+    </footer>
+  </div>
+</nav>
