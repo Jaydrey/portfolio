@@ -2,7 +2,7 @@
 import { useEffect, createRef } from "react";
 import lottie from "lottie-web";
 
-const HeroAnimation = ({ lottie_path }: { lottie_path: string}) => {
+const HeroAnimation = ({ lottie_path }: { lottie_path: string }) => {
   let animationContainer = createRef<HTMLDivElement>();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const HeroAnimation = ({ lottie_path }: { lottie_path: string}) => {
     });
 
     return () => animate.destroy();
-  }, []);
+  }, [animationContainer, lottie_path]);
   return <div className="w-full h-full" ref={animationContainer}></div>;
 };
 
